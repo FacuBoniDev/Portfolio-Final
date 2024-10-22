@@ -268,6 +268,16 @@
 <p class="Copyright">© Copyright Facundo Bonicalzi 2024</p>
 
 <script>
+    window.addEventListener('load', function() {
+        // Verifica si la URL contiene #contacto
+        if (window.location.hash === '#contactoSection') {
+            // Mostrar el alert si la página ha sido redirigida a la sección #contacto
+            alert('Tus datos fueron enviados correctamente.');
+        }
+    });
+</script>
+
+<script>
     document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contactForm');
   const copyEmailBtn = document.getElementById('copyEmailBtn');
