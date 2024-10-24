@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/favicon-32x32.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div id="particles-js"></div>
@@ -225,7 +227,7 @@
 
     <div class="form-container">
         <h2>Contáctame</h2>
-        <form id="contactForm" action="https://formsubmit.co/facuboni03@gmail.com" method="POST">
+        <form id="form" action="https://formspree.io/f/meoqonzb" method="post">
         <div class="form-row">
             <div class="form-group">
             <label for="nombreApellido">Nombre y Apellido:</label>
@@ -240,9 +242,7 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" required></textarea>
         </div>
-        <button type="submit">Enviar</button>
-        <input type="hidden" name="_next" value="https://facubonidev.github.io/Portfolio-Final/#contactoSection">
-        <input type="hidden" name="_captcha" value="false">
+        <button id="btnEnviar" type="submit">Enviar</button>
         </form>
         
         <div class="alternative-contact">
@@ -269,6 +269,42 @@
 </section>
 
 <p class="Copyright">© Copyright Facundo Bonicalzi 2024</p>
+
+
+
+<script>
+    const $form = document.querySelector('#form');
+
+    $form.addEventListener('submit', handleSubmit);
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const form = new FormData(this);
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            this.reset();
+        }
+    }
+</script>
+
+<script>
+    $('#btnEnviar').click(function(){
+        Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Tus datos fueron enviados. Pronto me pondré en contacto!",
+  showConfirmButton: false,
+  timer: 1500
+});
+    })
+</script>
 
 <script>
     window.addEventListener('load', function() {
