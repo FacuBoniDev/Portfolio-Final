@@ -1120,7 +1120,7 @@ html{
 .socials-icons {
   display: flex;
   flex-direction: column;
-  background-color: white; /* Fondo blanco */
+  background-color: rgb(240, 235, 235); /* Fondo blanco */
   border-radius: 50px; /* Bordes redondeados */
   padding: 5px;
   margin-top: 2px; /* Reduce la distancia entre la imagen principal y los íconos */
@@ -1144,7 +1144,7 @@ html{
   width: 60px; /* Tamaño de los íconos */
   height: 60px;
   margin: 5px 0;
-  background-color: white;
+  background-color: rgb(240, 235, 235);
   border-radius: 50%;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -1155,7 +1155,7 @@ html{
 }
 
 .socials-icons a:hover {
-  background-color: #ddd;
+  background-color: #cfcece;
   transform: scale(1.1);
 }
 
