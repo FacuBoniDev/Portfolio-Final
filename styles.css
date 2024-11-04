@@ -1026,24 +1026,25 @@ h2{
   color: transparent;
 }
 
-.pokemonFoto{
+.retroKitsImg{
   height: 260px;
-  width: 400px;
+  width: 350px;
   border-radius: 15px;
 }
 
-#pokemonTitulo{
-  background: linear-gradient(45deg, #ece91a 0%, #dda304 100%);
+#retroKitsTitulo{
+  background: linear-gradient(45deg, #3185fc 0%, #064baa 100%);
   background-clip: text; /* Propiedad estándar */
   -webkit-background-clip: text; /* Prefijo para navegadores WebKit */
   color: transparent;
 }
 
-#pokemonCard{
-  box-shadow: 0 0 0 5px #f3dd18c0;
+#retroKitsCard{
+  box-shadow: 0 0 0 5px #064baa;
+  background-color: #3185fc ;
 }
 
-#pokemonCard:hover{
+#retroKitsCard:hover{
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 
 }
