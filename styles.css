@@ -1046,7 +1046,26 @@ h2{
 
 #retroKitsCard:hover{
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
 
+.pongImg{
+  height: 262px;
+  width: 400px;
+}
+
+#pongCard{
+  box-shadow: 0 0 0 5px rgb(10, 199, 4);
+}
+
+#pongTitulo{
+  background: linear-gradient(45deg, rgb(10, 199, 4) 0%, rgb(5, 102, 1) 100%);
+  background-clip: text; /* Propiedad estándar */
+  -webkit-background-clip: text; /* Prefijo para navegadores WebKit */
+  color: transparent;
+}
+
+#pongCard:hover{
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 html{
